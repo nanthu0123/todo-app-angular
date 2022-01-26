@@ -1,0 +1,18 @@
+<div *ngIf="todoList.length;else empty">
+    <div class="todo-container" *ngFor="let item of todoList;let i=index">
+        <div class="todo-items">{{item}}
+            <span class="remove btn btn-sm btn-danger" (click)="onRemove(i)">
+                <fa-icon [icon]="faIcons.faTrash"></fa-icon>
+            </span>
+            <span class="edit btn btn-sm btn-primary" (click)="onEdit(i)">
+                <fa-icon [icon]="faIcons.faEdit"></fa-icon>
+            </span>
+        </div>
+
+    </div>
+</div>
+<ng-template #empty>
+    <div class="no-items">
+        no todo
+    </div>
+</ng-template>

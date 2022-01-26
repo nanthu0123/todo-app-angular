@@ -1,0 +1,14 @@
+.todo-items,
+.no-items {
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+    margin: 10px auto;
+    text-decoration: none;
+    width: 40%;
+    list-style-type: none;
+    .remove,
+    .edit {
+        float: right;
+        margin: 0 10px;
+    }
+}
